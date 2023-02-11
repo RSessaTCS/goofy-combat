@@ -20,7 +20,8 @@ public class FadeScene : MonoBehaviour
         {
             float fadeAlpha = FadePanel.color.a + (fadeSpeed * Time.deltaTime);
             FadePanel.color = new Color(FadePanel.color.r, FadePanel.color.g, FadePanel.color.b, fadeAlpha);
-            if (fadeAlpha >= 255)
+            Debug.Log(fadeAlpha);
+            if (fadeAlpha >= 1)
             {
                 fadeOut = false;
             }
@@ -39,10 +40,12 @@ public class FadeScene : MonoBehaviour
     }
     public void FadeIn()
     {
-        fadeIn = true;
+        fadeIn = true; 
+        FadePanel.gameObject.SetActive(true);
     }
     public void FadeOut()
     {
         fadeOut = true;
+        FadePanel.gameObject.SetActive(true);
     }
 }

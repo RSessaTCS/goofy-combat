@@ -19,6 +19,7 @@ public class randommaps : MonoBehaviour
         if (changingScene && fadeScene.fadeOut==false)
         {
             int random = Random.Range(0, 7);
+            Debug.Log(random);
             SceneManager.LoadScene(maps[random]);
         }
     }
